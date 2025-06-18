@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="description" content="A simple weather application to get current weather information for any city.">
+    <meta name="keywords" content="weather, app, current weather, city weather, weather information">
+    <meta name="author" content="Your Name">
+    <meta name="theme-color" content="#4CAF50">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="your-google-site-verification-code">
+    <meta property="og:title" content="Weather App">
+    <meta property="og:description" content="Get the latest weather updates for your city with our simple weather app.">
+    <meta property="og:image" content="https://example.com/your-image.jpg">
+    <meta property="og:url" content="https://example.com/weather-app">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="weather_css.css">
+</head>
+<body>
+    <div class="weather-container">
+        <h1 class="app-title">Weather App</h1>
+        
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Enter city name..." id="cityInput">
+            <button class="search-btn" id="searchBtn">🔍</button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Getting weather data...</p>
+        </div>
+
+        <div class="weather-info" id="weatherInfo">
+            <div class="location">
+                <h2 id="cityName">City Name</h2>
+                <p id="country">Country</p>
+            </div>
+            
+            <div class="temperature-section">
+                <div class="temperature">
+                    <span id="temp">25</span>
+                    <span class="unit">°C</span>
+                </div>
+                <div class="weather-icon" id="weatherIcon">☀️</div>
+            </div>
+            
+            <div class="weather-description">
+                <p id="description">Clear Sky</p>
+                <p id="feelsLike">Feels like 28°C</p>
+            </div>
+            
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span class="detail-label">Humidity</span>
+                    <span class="detail-value" id="humidity">65%</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Wind Speed</span>
+                    <span class="detail-value" id="windSpeed">12 km/h</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Pressure</span>
+                    <span class="detail-value" id="pressure">1013 hPa</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Visibility</span>
+                    <span class="detail-value" id="visibility">10 km</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="error-message" id="errorMessage">
+            <p>City not found. Please try again.</p>
+        </div>
+    </div>
+
+    <script src="weather_js.js"></script>
+</body>
+</html>
